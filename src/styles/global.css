@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;600;700&family=ZCOOL+XiaoWei&display=swap");
+
+:root {
+  --ink: #191612;
+  --ink-soft: #595248;
+  --surface: #fffdf8;
+  --line: rgba(25, 22, 18, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  color: var(--ink);
+  background: #f2eadf;
+  font-family: "Noto Serif SC", "Songti SC", "STSong", serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}

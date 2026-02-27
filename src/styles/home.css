@@ -1,0 +1,291 @@
+.ambient {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.ambient-a {
+  background:
+    radial-gradient(58rem 34rem at 12% -4%, rgba(245, 183, 96, 0.28), transparent 68%),
+    radial-gradient(34rem 20rem at 92% 12%, rgba(26, 109, 122, 0.22), transparent 70%);
+}
+
+.ambient-b {
+  opacity: 0.18;
+  background-image: radial-gradient(rgba(58, 40, 19, 0.22) 0.55px, transparent 0.55px);
+  background-size: 4px 4px;
+}
+
+.home-shell {
+  position: relative;
+  z-index: 1;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: clamp(16px, 2.2vw, 30px);
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(300px, 390px) minmax(0, 1fr);
+  gap: clamp(14px, 2vw, 24px);
+  align-items: start;
+}
+
+.hero-panel {
+  position: sticky;
+  top: 16px;
+  border: 1px solid rgba(41, 29, 17, 0.2);
+  border-radius: 26px;
+  background: linear-gradient(170deg, rgba(255, 251, 242, 0.94), rgba(249, 238, 220, 0.84));
+  box-shadow: 0 24px 50px rgba(39, 24, 9, 0.16);
+  padding: clamp(18px, 2.2vw, 24px);
+  display: grid;
+  gap: 14px;
+  animation: slide-up 480ms ease;
+}
+
+.hero-heading {
+  display: grid;
+  gap: 10px;
+}
+
+.eyebrow {
+  margin: 0;
+  font-family: "ZCOOL XiaoWei", serif;
+  letter-spacing: 0.16em;
+  font-size: 0.76rem;
+  color: #0e5e67;
+}
+
+.hero-panel h1 {
+  margin: 0;
+  font-family: "Ma Shan Zheng", "ZCOOL XiaoWei", serif;
+  font-size: clamp(2.1rem, 4vw, 2.95rem);
+  line-height: 0.98;
+}
+
+.hero-text {
+  margin: 0;
+  color: #4e473d;
+  line-height: 1.7;
+  font-size: 0.94rem;
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.hero-metrics div {
+  border: 1px solid rgba(39, 29, 17, 0.14);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 10px 9px;
+  display: grid;
+  gap: 4px;
+}
+
+.hero-metrics strong {
+  font-size: 1.28rem;
+  line-height: 1;
+}
+
+.hero-metrics span {
+  color: #655d52;
+  font-size: 0.78rem;
+}
+
+.hero-note {
+  border: 1px dashed rgba(21, 102, 113, 0.34);
+  background: linear-gradient(125deg, rgba(12, 90, 100, 0.08), rgba(12, 90, 100, 0.02));
+  border-radius: 14px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.hero-note p {
+  margin: 0;
+  color: #19444a;
+  font-size: 0.84rem;
+}
+
+.hero-note a {
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 0.84rem;
+  color: #0b5a64;
+}
+
+.modules-panel {
+  border: 1px solid rgba(41, 29, 17, 0.17);
+  border-radius: 26px;
+  background: rgba(255, 251, 245, 0.9);
+  box-shadow: 0 24px 50px rgba(38, 24, 8, 0.13);
+  padding: clamp(16px, 2.1vw, 24px);
+  animation: slide-up 620ms ease;
+}
+
+.modules-head {
+  margin-bottom: 14px;
+}
+
+.modules-head h2 {
+  margin: 0;
+  font-size: clamp(1.22rem, 2.3vw, 1.72rem);
+}
+
+.modules-head p {
+  margin: 7px 0 0;
+  color: #5f584e;
+  font-size: 0.9rem;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.module-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(38, 28, 14, 0.16);
+  border-radius: 18px;
+  background: linear-gradient(160deg, #fffefc 0%, #fff9f0 100%);
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+  text-decoration: none;
+  transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+}
+
+.module-card::before {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 999px;
+  right: -52px;
+  top: -52px;
+  background: radial-gradient(circle, rgba(0, 123, 140, 0.16), rgba(0, 123, 140, 0));
+}
+
+.module-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(21, 98, 110, 0.3);
+  box-shadow: 0 12px 20px rgba(24, 17, 10, 0.14);
+}
+
+.module-id {
+  font-family: "ZCOOL XiaoWei", serif;
+  font-size: 0.8rem;
+  color: #8c7f6d;
+  letter-spacing: 0.12em;
+}
+
+.module-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.module-title {
+  margin: 0;
+  font-size: 1.08rem;
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  border: 1px solid transparent;
+}
+
+.badge.ready {
+  background: rgba(12, 109, 65, 0.1);
+  color: #0f6640;
+  border-color: rgba(15, 102, 64, 0.24);
+}
+
+.badge.planned {
+  background: rgba(164, 87, 16, 0.12);
+  color: #7e4311;
+  border-color: rgba(126, 67, 17, 0.24);
+}
+
+.module-desc {
+  margin: 0;
+  color: #5d5549;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.module-points {
+  margin: 0;
+  padding-left: 18px;
+  color: #574f44;
+  font-size: 0.83rem;
+  line-height: 1.6;
+}
+
+.module-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.module-tag {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px dashed rgba(39, 23, 10, 0.26);
+  color: #4d453a;
+  background: rgba(255, 255, 255, 0.64);
+}
+
+.module-link {
+  color: #0d5b66;
+  font-size: 0.85rem;
+}
+
+.module-card.planned {
+  background: linear-gradient(160deg, #fffdf9 0%, #fff6ea 100%);
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 980px) {
+  .home-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-panel {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-note {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,70 @@
+.module-body {
+  margin: 0 auto;
+  max-width: 980px;
+  min-height: 100vh;
+  padding: clamp(14px, 2.1vw, 26px);
+  background:
+    radial-gradient(44rem 26rem at 8% -10%, rgba(242, 185, 100, 0.22), transparent 72%),
+    radial-gradient(26rem 18rem at 90% 10%, rgba(10, 104, 118, 0.16), transparent 70%),
+    linear-gradient(160deg, #efe4d2 0%, #deccb0 100%);
+}
+
+.module-shell {
+  border: 1px solid rgba(30, 21, 9, 0.18);
+  border-radius: 24px;
+  background: rgba(255, 252, 245, 0.9);
+  box-shadow: 0 22px 42px rgba(30, 20, 8, 0.14);
+  padding: clamp(16px, 2.6vw, 30px);
+}
+
+.module-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(31, 23, 12, 0.22);
+  background: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.module-nav:hover {
+  border-color: rgba(13, 91, 102, 0.44);
+}
+
+.module-head {
+  margin-top: 16px;
+}
+
+.module-head h1 {
+  margin: 0;
+  font-family: "Ma Shan Zheng", "ZCOOL XiaoWei", serif;
+  font-size: clamp(2.1rem, 4vw, 2.9rem);
+}
+
+.module-head p {
+  margin: 10px 0 0;
+  color: #575045;
+  line-height: 1.7;
+}
+
+.coming-card {
+  margin-top: 18px;
+  border-radius: 16px;
+  border: 1px dashed rgba(31, 23, 12, 0.26);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 14px;
+}
+
+.coming-card h2 {
+  margin: 0;
+  font-size: 1.12rem;
+}
+
+.coming-card ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: #4f473b;
+  line-height: 1.8;
+}
