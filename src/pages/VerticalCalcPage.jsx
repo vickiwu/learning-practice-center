@@ -10,25 +10,36 @@ function spacedDigits(value) {
 }
 
 function createAddProblem(maxValue) {
-  let a = 0;
-  let b = 0;
-  const minOperand = maxValue <= 100 ? 6 : 10;
-
-  while (true) {
-    a = randInt(minOperand, maxValue - 1);
-    b = randInt(1, maxValue - 1);
-    if (a + b <= maxValue) {
-      break;
+  if (maxValue <= 20) {
+    let a = 0;
+    let b = 0;
+    while (true) {
+      a = randInt(2, maxValue - 1);
+      b = randInt(1, maxValue - 1);
+      if (a + b <= maxValue) {
+        break;
+      }
     }
+    return { a, b, op: "+" };
   }
+
+  const minOperand = 10;
+  const a = randInt(minOperand, maxValue - minOperand);
+  const b = randInt(minOperand, maxValue - a);
 
   return { a, b, op: "+" };
 }
 
 function createSubProblem(maxValue) {
-  const minTop = maxValue <= 100 ? 6 : 10;
-  const a = randInt(minTop, maxValue);
-  const b = randInt(1, a - 1);
+  if (maxValue <= 10) {
+    const a = randInt(2, maxValue);
+    const b = randInt(1, a - 1);
+    return { a, b, op: "-" };
+  }
+
+  // Prefer two-digit operands to reduce one-digit numbers in subtraction drills.
+  const a = randInt(11, maxValue);
+  const b = randInt(10, a - 1);
   return { a, b, op: "-" };
 }
 
